@@ -1,21 +1,49 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import Hamburger from '../assets/Icons/Hamburger';
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 640);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
-    <header className='sticky top-0 flex justify-between bg-black text-white py-4 px-[5%]'>
-        <div>
-       <h1 className='font-Greatvibes text-5xl font-bold'>Anupa Baral</h1>
+    <>
+      {isMobile ? (
+        <div className='flex justify-between px-[2%] items-center py-4'>
+          <div>
+            <h1 className='font-Greatvibes text-2xl sm:text-5xl font-bold'>Anupa Baral</h1>
+          </div>
+          <div>
+            <Hamburger />
+          </div>
         </div>
-        <nav className='list-none flex justify-between gap-5 text-white'>
-        <li><a href="#"></a>Home</li>
-        <li><a href="#"></a>About</li>
-        <li><a href="#"></a>Portfolio</li>
-        <li><a href="#"></a>Experience</li>
-        <li><a href="#"></a>Contact</li>
+      ) : (
+        <header className='sticky top-0 flex justify-between bg-black text-white py-4 px-[5%]'>
+          <div>
+            <h1 className='font-Greatvibes text-2xl sm:text-5xl font-bold'>Anupa Baral</h1>
+          </div>
+          <nav className='list-none flex justify-between gap-5 text-white'>
+            <ul className='flex justify-between gap-5'>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Experience</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+      )}
+    </>
+  );
+};
 
-        </nav>
-    </header>
-  )
-}
-
-export default Header
+export default Header;

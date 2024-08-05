@@ -42,7 +42,7 @@ const Experience = () => {
       <h2 className='underline text-3xl font-bold  '>Experience</h2>
       <p>These are the technologies I've worked with and used them in my projects.</p>
       </div>
-      <div className="grid grid-cols-3 justify-between gap-5">
+      <div className="grid grid-col-1 sm:grid-cols-3 justify-center sm:justify-between gap-5">
         {Logo.map((logo) => (
           <Card
             key={logo.id}

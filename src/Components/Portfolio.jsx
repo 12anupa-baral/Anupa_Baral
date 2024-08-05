@@ -48,7 +48,7 @@ const Portfolio = () => {
       <h2 className='underline text-3xl font-bold '>Portfolio</h2>
       <p>Check out some of my work right here</p>
       </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
         {Projects.map((project) => (
           <Card 
             key={project.id} 
