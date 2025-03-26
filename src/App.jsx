@@ -11,11 +11,9 @@ import Card from './Components/Card'
 const App = () => {
   return (
     <>
-   <Header/>
    <div className='px-[5%] sm:px-[15%] bg-gradient-to-b from-black to-gray-800 font-Raleway '>
    <Hero/>
    <About/>
-   {/* <Card/> */}
    <Portfolio/>
    <Experience/>
    <Contact/>
