@@ -5,33 +5,33 @@ const Experience = () => {
     const Logo = [
         {   
           id: 1,
-          Imgurl: 'src/assets/html.png',
+          Imgurl: '/assets/html.png',
           color: 'shadow-orange-600'
 
         },
         {   
           id: 2,
-          Imgurl: 'src/assets/css.png',
+          Imgurl: '/assets/css.png',
           color: 'shadow-cyan-400'
         },
         {   
           id: 3,
-          Imgurl: 'src/assets/js.png',
+          Imgurl: '/assets/js.png',
           color: 'shadow-yellow-400'
         },
         {   
           id: 4,
-          Imgurl: 'src/assets/react.svg',
+          Imgurl: '/assets/react.svg',
           color: 'shadow-blue-600'
         },
         {   
           id: 5,
-          Imgurl: 'src/assets/tailwind.png',
+          Imgurl: '/assets/tailwind.png',
           color: 'shadow-blue-400'
         },
         {   
           id: 6,
-          Imgurl: 'src/assets/github_logo.png',
+          Imgurl: '/assets/github_logo.png',
           color: 'shadow-white'
         }
       ];

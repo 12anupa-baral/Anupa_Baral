@@ -1,5 +1,5 @@
 import React from 'react'
-import Anupa from '../assets/anupa1.png'
+import Anupa from '/assets/anupa1.png'
 
 const Hero = () => {
   return (
